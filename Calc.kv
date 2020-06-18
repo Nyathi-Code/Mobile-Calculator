@@ -1,0 +1,36 @@
+<CalcWindow>:
+    orientation:"vertical"
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "pic.jpg"
+
+    BoxLayout:
+        id: textinput
+        size_hint_y: .1
+        TextInput:
+            id: inputt
+            size_hint_y:
+            padding: 10
+            font_size: 17
+            background_color: (1.0,1.0,1.0,1.0)
+            focus: True
+            readonly: True
+
+    BoxLayout:
+        id: main_btn
+        size_hint_y: .8
+
+        GridLayout:
+            id: numbers
+            cols:4
+            spacing: 7
+
+    BoxLayout:
+        id: title
+        size_hint_y: .1
+        Label:
+            text: "Musa's Calculator"
+            font_size: 30
+            bold : True
